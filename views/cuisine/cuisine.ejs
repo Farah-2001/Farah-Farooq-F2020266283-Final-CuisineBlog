@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Up!!</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css"/>
+    
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-custom navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="/" style="color: rgb(255,165,0);-webkit-text-stroke-width: 1px;-webkit-text-stroke-color:rgb(254,90,29); font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Bon Appetit</a>
+          <button
+           class="navbar-toggler"
+           type="button"
+           data-bs-toggle="collapse"
+           data-bs-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent"
+           aria-expanded="false"
+           aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+               <a class="nav-link" aria-current="page" href="/" style="color: black;">Home</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" aria-current="page" href="/cuisine" style="color: black;">Cuisines</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" aria-current="page" href="/contact" style="color: black;">ContactUs</a>
+             </li>
+            </ul>
+            <div class="collapse navbar-collapse nav justify-content-end" id="navbarColor01">    
+              <form class="form-inline my-2 my-lg-0" action="/" method="get">    
+                <input class="form-control mr-sm-2" type="search" name="category" placeholder="Search">    
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>    
+              </form>    
+            </div>   
+          </div>
+      </div>
+    </nav>
+  </div>
+  
+  
+
+    <figure class="overlay" style="margin-top:3%;">      
+      <img src="/images/ella-olsson-oPBjWBCcAEo-unsplash.jpg" alt="banner" class="home" style="width: 100%; height: 590px;">
+      <h1 class="caption" style=" text-align: center; font-size: 400%; height: auto;"> 
+        Top Recommendations
+      </h1> 
+    </figure>
+
+      <div class="container" style="padding-top:2% ;">
+      <a class="btn btn-primary" href="/review/new" style="width: 25%;background-color: rgb(131,137,150);">Create New</a>
+
+      <hr />
+      <% for(let review of cuisine){ %>
+        <div>
+            <h2 style="font-weight: bold;"><%= review.title %></h2>
+
+            <div class="text" style="font-size:small; font-weight:bold;">
+              <%= review.category %>
+            </div>
+
+            <br>
+
+            <img src="<%= review.img %>" alt="" style="width: 100%; height: 550px; padding-bottom: 2%;"/>
+
+            <a href="/cuisine/<%= review._id %>">Show Details</a>
+
+            <hr />
+
+        </div>
+      <% } %>
+    </div>
+
+    <footer class="footer">
+      <div class="section-center">
+        <div class="social-icons">
+          
+          <!-- social icon -->
+          <a href="https://www.facebook.com/" class="social-icon">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <!-- end of social icon -->
+          
+          <!-- social icon -->
+          <a href="https://twitter.com/?lang=en" class="social-icon">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <!-- end of social icon -->
+          
+          <!-- social icon -->
+          <a href="https://www.youtube.com/" class="social-icon">
+              <i class="fa fa-youtube"></i>
+            </a>
+            <!-- end of social icon -->
+  
+          <!-- social icon -->
+          <a href="https://www.instagram.com/" class="social-icon">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <!-- end of social icon -->
+  
+        </div>
+        
+        <p class="footer-text">
+          &copy; <span class="text-primary">BonAppetite</span>. all rights
+          reserved
+        </p>
+      </div>
+    </footer>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

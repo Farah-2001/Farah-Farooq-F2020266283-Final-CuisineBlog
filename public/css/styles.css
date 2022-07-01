@@ -1,0 +1,68 @@
+.nav-link:hover
+{
+    background-color:white;
+    border-radius: 15%;
+}
+.navbar-custom
+{
+  background-color: rgb(192,192,192);
+}
+.h1
+{
+  background-color: black;
+}
+
+figure.overlayhome
+{    
+    position: absolute;    
+    width: 100%; 
+    height: auto;  
+} 
+
+.caption
+{
+  position: absolute;      
+  width: 100%;    
+  top: 0;  
+ 
+  /**text, adjust all values as desired**/    
+  text-align: center;
+  margin-top: 15%;     
+  font-family: 'Courier New', Courier, monospace;
+  color: white; 
+  font-weight: bold; 
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(254,90,29);
+
+   /**some fallback value**/    
+   font-size: 5px;  
+   
+   /**responsive size is roughly 3.4%  of the device's viewport width**/    
+   font-size: 2.4vw;   
+}
+
+
+/*ICONS*/
+.fa 
+{
+    padding: 5px;
+    font-size: 20px;
+    width: 5%;
+    text-align: center;
+    border-radius: 50%;
+    color:black;  
+}
+.social-icons
+{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.footer-text
+{
+    text-align: center;
+    font-size: large;
+    padding: 15px;
+    background-color: rgb(192,192,192);
+}
+
